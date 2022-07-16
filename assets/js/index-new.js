@@ -877,7 +877,7 @@ function initVisualFilter() {
                 }, 300);
             }
         });
-        $('.development-btn').click(function () {
+        $('.web-btn').click(function () {
             if ($(this).hasClass('active')) { } else {
                 $('.toggle-row .btn-normal').removeClass('active');
                 $('.toggle-row .btn-normal').addClass('not-active');
@@ -886,7 +886,21 @@ function initVisualFilter() {
                 // Cookies.set("filter", "development", { expires: 1 });
                 setTimeout(function () {
                     $('.mouse-pos-list-image li, .mouse-pos-list-image-wrap li, .work-tiles li').removeClass('visible');
-                    $('.mouse-pos-list-image li.development, .mouse-pos-list-image-wrap li.development, .work-tiles li.development').addClass('visible');
+                    $('.mouse-pos-list-image li.web, .mouse-pos-list-image-wrap li.web, .work-tiles li.web').addClass('visible');
+                }, 300);
+            }
+        });
+
+        $('.android-btn').click(function () {
+            if ($(this).hasClass('active')) { } else {
+                $('.toggle-row .btn-normal').removeClass('active');
+                $('.toggle-row .btn-normal').addClass('not-active');
+                $(this).addClass('active');
+                $(this).removeClass('not-active');
+                // Cookies.set("filter", "development", { expires: 1 });
+                setTimeout(function () {
+                    $('.mouse-pos-list-image li, .mouse-pos-list-image-wrap li, .work-tiles li').removeClass('visible');
+                    $('.mouse-pos-list-image li.android, .mouse-pos-list-image-wrap li.android, .work-tiles li.android').addClass('visible');
                 }, 300);
             }
         });
@@ -1439,3 +1453,10 @@ function initScrolltriggerAnimations() {
     }); // End GSAP Matchmedia
 
 }
+
+//calculate length in ul - works for any ul
+document.querySelector('.all-number').innerHTML = document.querySelectorAll('.work-items li').length;
+document.querySelector('.all-number').innerHTML = document.querySelectorAll('.work-items li').length;
+document.querySelector('.design-number').innerHTML = document.querySelectorAll('.work-items li.design').length;
+document.querySelector('.web-number').innerHTML = document.querySelectorAll('.work-items li.web').length;
+document.querySelector('.android-number').innerHTML = document.querySelectorAll('.work-items li.android').length;
