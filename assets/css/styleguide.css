@@ -3,13 +3,13 @@
 :root {
 
     --color-dark: #1C1D20;
-    --color-dark-dark: #111;
-    --color-light: #FFFFFF;
-    --color-blue: #1bdc96;
-    --color-blue-dark: #139b69;
-    --color-gray: #999D9E;
-    --color-lightgray: #E9EAEB;
-    --color-white: #111;
+        --color-dark-dark: #111;
+            --color-light: #FFFFFF;
+            --color-green: #1bdc96;
+                --color-green-dark: #139b69;
+                --color-gray: #999D9E;
+                --color-lightgray: #E9EAEB;
+                --color-white: #111;
 
     --color-border: rgba(255, 255, 255, 0.175);
     --color-border-solid: #D2D2D2;
